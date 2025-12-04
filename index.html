@@ -1,103 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Personal Portfolio Webpage</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Jeyvezer Banwa — Portfolio</title>
+
+  <!-- Font Awesome (icons) -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-KyZXEAg3QhqLMpG8r+Knujsl5+5hb7ie1x1fXQvF1x6rJrYf2s0XgkZ2e4f9qz1cZq1z3q8y0Q6VJ1Y3a9k9g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-<nav id="navbar">
-    <div class="nav-container"></div>
-        <h1 class="logo"> My Portfolio</h1>
-        <ul class="nav-links">
-            <li><a href="#welcome-section">Home</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a 
-                href="https://github.com/Jayveebanwa"
-                id="profile-link"
-                target="_blank"></a></li>
-        </ul>
-    </div>
- </nav>
+  <!-- NAVBAR -->
+  <nav id="navbar" class="nav-outer">
+    <div class="nav-container">
+      <a href="#welcome-section" class="brand">
+        <img src="myphoto.jpeg" alt="Logo" class="nav-avatar" />
+        <span class="logo-text">Jeyvezer Banwa</span>
+      </a>
 
-    <section id="welcome-section">
-        <div class="welcome-content">
-            <h1>Hello, I'm <strong><span class="highlight">Jeyvezer Banwa</span></strong></h1>
-            <p>BSIT Student / Future Web Developer</p>
+      <ul class="nav-links">
+        <li><a href="#welcome-section">Home</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#" id="theme-toggle" title="Toggle theme"><i class="fa-regular fa-sun"></i></a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- WELCOME -->
+  <header id="welcome-section" class="hero">
+    <div class="welcome-content container">
+      <figure class="avatar-wrap">
+        <img src="myphoto.jpeg" alt="Jeyvezer Banwa" class="welcome-img" />
+      </figure>
+
+      <div class="welcome-text">
+        <h1>Hello, I'm <span class="highlight">Jeyvezer Banwa</span></h1>
+        <p class="subtitle">BSIT Student · Future Web Developer</p>
+
+        <div class="hero-ctas">
+          <a class="btn primary" href="#projects"><i class="fa-solid fa-folder-open"></i> View Projects</a>
+          <a class="btn outline" href="https://github.com/Jayveebanwa" target="_blank" rel="noopener">
+            <i class="fa-brands fa-github"></i> View GitHub
+          </a>
         </div>
-    </section>
-    
-    <section id="projects">
-        <h2>My Projects</h2>
 
-        <div class="project-grid">
-            
-                <!--Product Landing Page-->
-            <a 
-        href="https://product-landing-page-tan-three.vercel.app/" 
-        target="_blank"
-        class="project-tile">
-        <img 
-                src="Product-landing-page.png" alt="project-image">
-            <div class="project-card">
-                <h3 class="project-title">Product Landing Page</h3>
-            </div>
-        </a>
-
-                <!--Survey Form-->
-             <a 
-        href="https://survey-form-ten-lake.vercel.app/" 
-        target="_blank"
-        class="project-tile">
-        <img src="Survey-form.png" alt="project-image">
-            <div class="project-card">
-                <h3 class="project-title">Survey Form</h3>
-            </div>
-        </a>
-
-                    <!--Tributw Page-->
-             <a 
-        href="https://tribute-page-si2n.vercel.app/" 
-        target="_blank"
-        class="project-tile">
-         <img src="tribute-page.png" alt="project-image">
-            <div class="project-card">
-                <h3 class="project-title">Tribute Page</h3>
-            </div>
-        </a>
-
-                <!--Technical Documentation Page-->
-             <a 
-        href="https://technical-documentation-page-xi.vercel.app/" 
-        target="_blank"
-        class="project-tile">
-        <img src="technical-documentation-page.png" alt="project-image">
-            <div class="project-card">
-                <h3 class="project-title">Technical Documentation Page</h3>
-            </div>
-        </a>
+        <ul class="quick-links">
+          <!-- Replace href="#" with your real social links -->
+          <li><a href="https://www.facebook.com/profile.php?id=100092530055781" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+          <li><a href="https://www.instagram.com/005.jebii/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a></li>
+          <li><a href="mailto:jeyvezerbanwa@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a></li>
+          <li><a href="#" title="Phone"><i class="fa-solid fa-phone"></i></a></li>
+        </ul>
+      </div>
     </div>
-    </section>
+  </header>
 
-        <!--Github Profile-->
-    <section id="github-link">
-        <a 
-        href="https://github.com/Jayveebanwa"
-        target="_blank"
-        id="profile-link">
-        <div>
-                <h3>GitHub Profile</h3>
-            </div>
+  <!-- PROJECTS -->
+  <section id="projects" class="section">
+    <div class="container">
+      <h2 class="section-title">My Projects</h2>
+
+      <div class="project-grid">
+        <!-- Project item: update href + img + title -->
+        <a class="project-tile" href="https://product-landing-page-tan-three.vercel.app/" target="_blank" rel="noopener">
+          <img src="Product-landing-page.png" alt="Product Landing" />
+          <div class="project-card">
+            <h3>Product Landing Page</h3>
+            <p class="muted">HTML · CSS · JS</p>
+          </div>
         </a>
-    </section>
 
-    <section id="contact">
-        <p>If you want to collaborate and work together:</p>
-        <h2>Contact Me</h2>
-        <p>📩Email: <strong><span>jeyvezerbanwa@gmail.com</span></strong></p>
-    </section>
+        <a class="project-tile" href="https://survey-form-ten-lake.vercel.app/" target="_blank" rel="noopener">
+          <img src="Survey-form.png" alt="Survey Form" />
+          <div class="project-card">
+            <h3>Survey Form</h3>
+            <p class="muted">Responsive Form</p>
+          </div>
+        </a>
+
+        <a class="project-tile" href="https://tribute-page-si2n.vercel.app/" target="_blank" rel="noopener">
+          <img src="tribute-page.png" alt="Tribute Page" />
+          <div class="project-card">
+            <h3>Tribute Page</h3>
+            <p class="muted">HTML · CSS</p>
+          </div>
+        </a>
+
+        <a class="project-tile" href="https://technical-documentation-page-xi.vercel.app/" target="_blank" rel="noopener">
+          <img src="technical-documentation-page.png" alt="Doc Page" />
+          <div class="project-card">
+            <h3>Technical Documentation Page</h3>
+            <p class="muted">Docs · Layout</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- GITHUB CTA -->
+  <section id="github-cta" class="section small">
+    <div class="container center">
+      <a href="https://github.com/Jayveebanwa" target="_blank" rel="noopener" class="github-cta">
+        <i class="fa-brands fa-github"></i>
+        <div class="cta-text">
+          <strong>View GitHub Profile</strong>
+          <span class="muted">See source code & contributions</span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <div class="container center">
+      <h2 class="section-title">Contact Me</h2>
+      <p>If you'd like to collaborate — email me at <a href="mailto:jeyvezerbanwa@gmail.com">jeyvezerbanwa@gmail.com</a> or message me on social media.</p>
+
+      <div class="contact-cards">
+        <a href="mailto:jeyvezerbanwa@gmail.com" class="contact-card">
+          <i class="fa-solid fa-envelope"></i>
+          <div><strong>Email</strong><div class="muted">jeyvezerbanwa@gmail.com</div></div>
+        </a>
+
+        <a href="#" class="contact-card">
+          <i class="fa-solid fa-phone"></i>
+          <div><strong>Phone</strong><div class="muted">+63 985 088 1724</div></div>
+        </a>
+
+        <a href="https://www.instagram.com/005.jebii/" class="contact-card">
+          <i class="fa-brands fa-instagram"></i>
+          <div><strong>Instagram</strong><div class="muted">@005.jebii</div></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <span>© <span id="year"></span> Jeyvezer Banwa</span>
+      </div>
+
+      <div class="footer-socials">
+        <!-- replace # with real links -->
+        <a href="https://www.facebook.com/profile.php?id=100092530055781" aria-label="Facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/005.jebii/" aria-label="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://github.com/Jayveebanwa" aria-label="GitHub" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="mailto:jeyvezerbanwa@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Minimal JS for interactions -->
+  <script>
+    // set year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // theme toggle (light/dark)
+    const themeToggle = document.getElementById('theme-toggle');
+    themeToggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      document.documentElement.classList.toggle('light');
+      // swap icon
+      const icon = themeToggle.querySelector('i');
+      if (document.documentElement.classList.contains('light')) {
+        icon.className = 'fa-regular fa-moon';
+      } else {
+        icon.className = 'fa-regular fa-sun';
+      }
+    });
+
+    // simple reveal on scroll
+    const srElems = document.querySelectorAll('.project-tile, .contact-card, .github-cta, .welcome-text');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+        }
+      });
+    }, {threshold: 0.12});
+    srElems.forEach(el => observer.observe(el));
+  </script>
 </body>
 </html>
